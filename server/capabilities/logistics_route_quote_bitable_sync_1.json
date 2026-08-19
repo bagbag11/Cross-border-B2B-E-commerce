@@ -1,0 +1,107 @@
+{
+  "id": "logistics_route_quote_bitable_sync_1",
+  "pluginKey": "@official-plugins/feishu-bitable",
+  "pluginVersion": "1.0.22",
+  "name": "物流线路报价数据同步飞书多维表格",
+  "description": "将物流线路报价数据批量新增或批量更新写入飞书多维表格，支持数据同步场景。",
+  "icon": "",
+  "paramsSchema": {},
+  "formValue": {
+    "fields": [
+      {
+        "bizType": "Text",
+        "id": "fldRedacted00",
+        "name": "线路名称，格式：物流商+线路名称",
+        "readable": true,
+        "writeable": true,
+        "type": 1
+      },
+      {
+        "id": "fldRedacted01",
+        "name": "@description 覆盖国家/地区，逗号分隔",
+        "type": 1,
+        "bizType": "Text",
+        "readable": true,
+        "writeable": true
+      },
+      {
+        "readable": true,
+        "writeable": true,
+        "id": "fldRedacted02",
+        "name": "@description 覆盖城市，逗号分隔",
+        "type": 1,
+        "bizType": "Text"
+      },
+      {
+        "type": 1,
+        "bizType": "Text",
+        "readable": true,
+        "writeable": true,
+        "id": "fldRedacted03",
+        "name": "@description 支持邮编范围"
+      },
+      {
+        "bizType": "Text",
+        "id": "fldRedacted04",
+        "name": "@description 支持物品类别，逗号分隔",
+        "type": 1,
+        "readable": true,
+        "writeable": true
+      },
+      {
+        "id": "fldRedacted05",
+        "name": "@description 最小物流时长（天）",
+        "type": 1,
+        "readable": true,
+        "writeable": true,
+        "bizType": "Text"
+      },
+      {
+        "readable": true,
+        "writeable": true,
+        "id": "fldRedacted06",
+        "name": "@description 最大物流时长（天）",
+        "type": 1,
+        "bizType": "Text"
+      },
+      {
+        "bizType": "Text",
+        "readable": true,
+        "writeable": true,
+        "id": "fldRedacted07",
+        "name": "是否启用",
+        "type": 1
+      },
+      {
+        "readable": true,
+        "writeable": true,
+        "bizType": "Text",
+        "id": "fldRedacted08",
+        "name": "渠道类型",
+        "type": 1
+      },
+      {
+        "name": "运输类型（境内派送or跨境运输）",
+        "type": 1,
+        "readable": true,
+        "writeable": true,
+        "bizType": "Text",
+        "id": "fldRedacted09"
+      },
+      {
+        "type": 1,
+        "bizType": "Text",
+        "readable": true,
+        "writeable": true,
+        "id": "fldRedacted10",
+        "name": "线路级别的附加说明或备注"
+      }
+    ],
+    "tips": "该实例支持batchAddRecords（批量新增记录≤500条）和batchUpdateRecords（批量更新记录≤500条）操作，请根据业务需求调用对应Action",
+    "appToken": "REDACTED_APP_TOKEN",
+    "tableID": "tblXXXXXXXXXX"
+  },
+  "createdAt": 1783654608360,
+  "updatedAt": 1785130592270,
+  "createdBy": 0
+}

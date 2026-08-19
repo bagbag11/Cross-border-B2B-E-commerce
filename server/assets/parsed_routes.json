@@ -1,0 +1,108 @@
+{
+  "_comment": "脱敏后的示例数据：仅用于演示 parsed_routes.json 的数据结构，所有线路/货代/价格均为虚构，真实报价数据未包含在本仓库中。",
+  "routes": [
+    {
+      "name": "示例货代A-美国海运普船",
+      "forwarder": "示例货代A",
+      "coverCountries": "美国",
+      "coverCities": "全美",
+      "channelType": "sea",
+      "minDeliveryDays": 13,
+      "maxDeliveryDays": 18,
+      "supportedCategories": "普货",
+      "volumetricDivisor": 6000,
+      "paymentDays": 30,
+      "remark": "示例线路：13-18 个自然日提取",
+      "isActive": true,
+      "pricingRules": [
+        {
+          "countries": "美西",
+          "billingMode": "per_kg",
+          "unitPrice": 10.00,
+          "firstWeightPrice": null,
+          "continuedWeightPrice": null,
+          "minCharge": null,
+          "minWeight": 10,
+          "maxWeight": 99999,
+          "remark": "美西(邮编8,9) 101kg+"
+        },
+        {
+          "countries": "美中",
+          "billingMode": "per_kg",
+          "unitPrice": 11.00,
+          "firstWeightPrice": null,
+          "continuedWeightPrice": null,
+          "minCharge": null,
+          "minWeight": 10,
+          "maxWeight": 99999,
+          "remark": "美中(邮编7) 101kg+"
+        },
+        {
+          "countries": "美东",
+          "billingMode": "per_kg",
+          "unitPrice": 12.00,
+          "firstWeightPrice": null,
+          "continuedWeightPrice": null,
+          "minCharge": null,
+          "minWeight": 10,
+          "maxWeight": 99999,
+          "remark": "美东(邮编0,1,2,3) 101kg+"
+        }
+      ]
+    },
+    {
+      "name": "示例货代B-德国空派",
+      "forwarder": "示例货代B",
+      "coverCountries": "德国",
+      "coverCities": "全德",
+      "channelType": "air",
+      "minDeliveryDays": 5,
+      "maxDeliveryDays": 8,
+      "supportedCategories": "普货,带电",
+      "volumetricDivisor": 6000,
+      "paymentDays": 15,
+      "remark": "示例线路：5-8 个自然日提取",
+      "isActive": true,
+      "pricingRules": [
+        {
+          "countries": "德国",
+          "billingMode": "first_weight_1kg",
+          "unitPrice": null,
+          "firstWeightPrice": 60.00,
+          "continuedWeightPrice": 25.00,
+          "minCharge": 60,
+          "minWeight": 0,
+          "maxWeight": 30,
+          "remark": "首重1kg + 续重/kg"
+        }
+      ]
+    },
+    {
+      "name": "示例货代C-日本专线",
+      "forwarder": "示例货代C",
+      "coverCountries": "日本",
+      "coverCities": "东京,大阪",
+      "channelType": "land",
+      "minDeliveryDays": 3,
+      "maxDeliveryDays": 5,
+      "supportedCategories": "普货,带电,纯电",
+      "volumetricDivisor": 6000,
+      "paymentDays": 0,
+      "remark": "示例线路：3-5 个自然日提取",
+      "isActive": true,
+      "pricingRules": [
+        {
+          "countries": "日本",
+          "billingMode": "volume",
+          "unitPrice": 880.00,
+          "firstWeightPrice": null,
+          "continuedWeightPrice": null,
+          "minCharge": null,
+          "minWeight": 0,
+          "maxWeight": 100,
+          "remark": "体积计费(CBM)"
+        }
+      ]
+    }
+  ]
+}
