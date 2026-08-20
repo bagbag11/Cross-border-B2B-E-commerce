@@ -331,6 +331,7 @@ pkill -f "npm run dev"
 - `client/src/components/ui/README.md` — shadcn/ui 使用指南
 - `client/src/components/business-ui/README.md` — 业务组件使用指南
 - `logistics-pricing-parser/README.md` — Coze 技能：货代表解析与飞书多维表格写入
+- `freight-data-audit-fix/README.md` — Aily 技能：货代数据审查修复（逐字段回源比对）
 
 ---
 
