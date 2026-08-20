@@ -72,6 +72,12 @@
 - 支持按字段名模糊搜索历史值（自动补全）
 - 按用户隔离
 
+### 7. Coze 技能集成（货代表自动入库）
+- 加入 `logistics-pricing-parser` 技能后，格式不一的货代表 Excel 可直接被解析入库：货代表 Excel → 技能自动识别 20 种主流货代格式并解析为标准 JSON → 写入飞书多维表格（路线表 + 计费规则表）→ 复用 `POST /api/logistics-routes/batch-upsert` 批量同步到应用数据库，形成「Excel → 多维表格 → 应用数据库」完整链路
+- 双向闭环：应用数据库 → 多维表格继续使用管理后台「同步到多维表格」按钮
+- 部署前提：技能在扣子中需配置 4 个环境变量（`COZE_FEISHU_APP_TOKEN`、`COZE_FEISHU_ROUTE_TABLE_ID`、`COZE_FEISHU_PRICING_TABLE_ID`、`COZE_FEISHU_BITABLE_TOKEN`）
+- 覆盖边界：当前覆盖 20 种主流货代格式自动识别；日本/墨西哥渠道、海外仓等特殊结构仍在扩展，详见「已知限制」
+
 ---
 
 ## 技术栈
@@ -324,6 +330,7 @@ pkill -f "npm run dev"
 - `shared/api.interface.ts` — 前后端共享类型定义
 - `client/src/components/ui/README.md` — shadcn/ui 使用指南
 - `client/src/components/business-ui/README.md` — 业务组件使用指南
+- `logistics-pricing-parser/README.md` — Coze 技能：货代表解析与飞书多维表格写入
 
 ---
 
@@ -336,4 +343,4 @@ pkill -f "npm run dev"
 
 ---
 
-*文档最后更新：2026-08-06*
+*文档最后更新：2026-08-20*
